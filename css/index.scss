@@ -1,0 +1,80 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+header{
+    height: 10vh;
+    background-color: #4338ca;
+    padding: 10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 200px;
+        .user_box{
+            display: flex;
+            gap: 5px;
+            .fa-solid{
+                background-color: rgb(35, 121, 6);
+            }
+        }
+        .account_nav_box{
+            display: flex;
+            gap: 5px;
+            // .fa-solid.fa-chevron-down{
+
+            // }
+        }
+    }
+}
+.body_content{
+    display: flex;
+    justify-content: center; /* căn giữa ngang */
+    align-items: center;     /* căn giữa dọc */
+
+    .container_body_box{
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        .title_box{
+            background-color: #4338ca;
+            text-align: center;
+            color: white;
+            padding: 30px 50px;
+            border-radius: 10px;
+            .fas.fa-bullseye{
+                margin-right: 5px;
+            }
+            
+        }
+        .form_content_body{
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            .title_form{
+                font-size: 30px;
+                color: #4338ca;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+    
+}
