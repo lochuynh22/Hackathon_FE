@@ -14,45 +14,132 @@
 </head>
 
 <body>
-        <header>
-            <div class="content">
-                <div class="user_box">
-                    <p><i class="fa-solid fa-book"></i>  </p>
-                    <p> Tai chinh ca nhan K24_Rikkei</p>
-                </div>
-                <div class="account_nav_box">
-                    <p>Tai khoan</p>
-                    <i class="fa-solid fa-chevron-down icon"></i>
-                </div>
-            </div>
-        </header>
+  <header>
+    <div class="content">
+      <div class="user_box">
+        <p><i class="fa-solid fa-book"></i></p>
+        <p>Tài chính cá nhân K24_Rikkei</p>
+      </div>
+      <div class="account_nav_box">
+        <p>Tài khoản</p>
+        <i class="fa-solid fa-chevron-down icon"></i>
+      </div>
+    </div>
+</header>
 
+  <div class="body_content">
+    <div class="container_body_box">
+      <div class="title_box">
+        <p><i class="fas fa-bullseye"></i> Kiểm soát chi tiêu thông minh</p>
+        <p id="title_box_note">Theo dõi ngân sách và thu chi dễ dàng</p>
+      </div>
 
-    <div class="body_content">
-        <div class="container_body_box">
-            <div class="title_box">
-                <p><i class="fas fa-bullseye"></i>Kiem Soat chi tieu Thong minh</p>
-                <p id="title_box_note">Theo doi ngan sach va thu chi de dang</p>
-            </div>
-
-            <div class="form_content_body">
-                <div class="title_form">
-                    <i class="fa-solid fa-signal"></i>
-                    <p>Personal Financial Management</p>
-                </div>
-            </div>
-            
+      <div class="form_content_body">
+        <div class="title_form">       
+          <p>📊 Quản Lý Tài Chính Cá Nhân</p>
+        </div>
+        <div class="wrapper">
+          <div class="date-picker">
+            <label for="date">📅 Chọn tháng:</label>
+            <input type="month" id="monthInput" class="custom-month" value="2025-03" />
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="money_box">
+            <label for="money_month">💰 Ngân sách tháng:</label>
+            <input type="number" placeholder="VD: 5000000">
+            <button type="submit">Lưu</button>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="money-remaining">
+            <span class="label">Số tiền còn lại</span>
+            <div class="amount">0 VND</div>
+          </div>
         </div>
 
+        <div class="category-manager">
+          <h3><i class="fa fa-folder-open"></i> Quản lý danh mục (theo tháng)</h3>
+          <div class="form-row">
+            <input type="text" placeholder="Tên danh mục" class="input-text" />
+            <input type="number" placeholder="Giới hạn (VND)" class="input-text" />
+            <button class="add-button">Thêm danh mục</button>
+          </div>
+          <ul class="category-list">
+            <li>Tiền phòng - Giới hạn: 2,000,000 VND <span class="action">Sửa</span> <span class="action">Xoá</span></li>
+          </ul>
+        </div>
+
+        <div class="spending-form">
+          <input type="number" placeholder="Số tiền" class="input-box" />
+          <button class="type-button selected">Tiền chi tiêu</button>
+          <input type="text" placeholder="Ghi chú" class="input-box" />
+          <button class="add-button-spending-form">Thêm</button>
+        </div>
+
+        <!-- Lịch sử giao dịch -->
+        <div class="card">
+          <h3><i class="fa fa-history"></i> Lịch sử giao dịch</h3>
+          <div class="filter-row">
+            <input type="text" placeholder="Tìm nội dung" />
+            <button class="sort-button">Sắp xếp theo giá</button>
+          </div>
+          <ul class="transaction-list">
+            <li>Tiền phòng - Đóng tiền phòng tháng 3: 2,000,000 VND <span class="delete">Xoá</span></li>
+            <li>Tiền xăng xe - Đổ xăng 21/3: 100,000 VND <span class="delete">Xoá</span></li>
+          </ul>
+          <div class="pagination">
+            <button>Previous</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+          </div>
+        </div>
+
+        <!-- Cảnh báo danh mục -->
+        <div class="warning-box">
+          Danh mục "Tiền ăn" đã vượt giới hạn: 1,060,000 / 1,000,000 VND
+        </div>
+
+        <!-- Thống kê chi tiêu -->
+        <div class="card">
+          <h3><i class="fa fa-chart-bar"></i> Thống kê chi tiêu các tháng</h3>
+          <table class="summary-table">
+            <thead>
+              <tr>
+                <th>Tháng</th>
+                <th>Chi tiêu</th>
+                <th>Ngân sách</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-03</td>
+                <td>2,150,000</td>
+                <td>5,000,000</td>
+                <td class="status-ok">Đạt</td>
+              </tr>
+              <tr>
+                <td>2025-04</td>
+                <td>3,100,000</td>
+                <td>2,000,000</td>
+                <td class="status-over">Vượt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
     </div>
+  </div>
 
-    <div class="footer">
-
+  <footer>
+    <div class="footer_box">
+      <p>&copy; Quản Lý Tài Chính Cá Nhân. by Tien Loc</p>
     </div>
-
-
-
-
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -64,7 +151,6 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <script src="main.js"></script>
-  <script src="./main.js"></script>
 </body>
 
 </html>
