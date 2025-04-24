@@ -1,6 +1,4 @@
-/*
-*  html5resetcss
-*/
+/* html5reset.scss */
 html,
 body,
 div,
@@ -76,11 +74,13 @@ video {
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: transparent
+    background: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    line-height: 1
+    line-height: 1;
+    font-size: 16px;
 }
 
 article,
@@ -94,23 +94,21 @@ hgroup,
 menu,
 nav,
 section {
-    display: block
+    display: block;
 }
 
 nav ul {
-    list-style: none
+    list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none
-}
+    quotes: none;
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: none
+    &:before,
+    &:after {
+        content: none;
+    }
 }
 
 a {
@@ -118,35 +116,35 @@ a {
     padding: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: transparent
+    background: transparent;
 }
 
 ins {
     background-color: #ff9;
     color: #000;
-    text-decoration: none
+    text-decoration: none;
 }
 
 mark {
     background-color: #ff9;
     color: #000;
     font-style: italic;
-    font-weight: bold
+    font-weight: bold;
 }
 
 del {
-    text-decoration: line-through
+    text-decoration: line-through;
 }
 
 abbr[title],
 dfn[title] {
     border-bottom: 1px dotted;
-    cursor: help
+    cursor: help;
 }
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 hr {
@@ -155,12 +153,12 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
-    padding: 0
+    padding: 0;
 }
 
 input,
 select {
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 html,
@@ -178,8 +176,10 @@ header {
     height: 8vh;
     background-color: #4338ca;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
     padding: 20px;
+
     .content {
         display: flex;
         justify-content: space-between;
@@ -188,6 +188,7 @@ header {
         .user_box {
             display: flex;
             gap: 5px;
+
             .fa-solid {
                 background-color: rgb(35, 121, 6);
             }
@@ -196,9 +197,6 @@ header {
         .account_nav_box {
             display: flex;
             gap: 5px;
-            // .fa-solid.fa-chevron-down{
-
-            // }
         }
     }
 }
@@ -221,13 +219,14 @@ header {
             color: white;
             padding: 30px 50px;
             border-radius: 10px;
+            font-size: 24px;
 
             .fas.fa-bullseye {
                 margin-right: 5px;
             }
 
             #title_box_note {
-                font-size: 10px;
+                font-size: 12px;
                 margin-top: 10px;
             }
         }
@@ -241,10 +240,9 @@ header {
                 display: flex;
                 text-align: center;
                 justify-content: center;
-                font-family: "Roboto";
-                font-size: 30px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 28px;
                 color: #4338ca;
-                display: flex;
                 gap: 10px;
                 margin-top: 20px;
             }
@@ -254,33 +252,32 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: auto; /* Adjust the height to fit content dynamically */
-                padding: 20px 30px; /* Adjusted padding for better spacing */
+                height: auto;
+                padding: 20px;
                 border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
-                width: 100%; /* Make it take full width */
-                max-width: 1200px; /* Set max-width for responsive design */
-                margin: 0 auto; /* Center it horizontally */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 600px;
+                margin: 0 auto;
             }
 
             .date-picker {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 10px;
+                font-size: 14px;
                 border: 1px solid #ccc;
                 border-radius: 8px;
                 padding: 4px 8px;
                 width: fit-content;
-            }
 
-            .custom-month {
-                background-color: white;
-                border: 2px solid transparent;
-                border-radius: 4px;
-                padding: 4px;
-                outline: none;
-                font-size: 14px;
+                .custom-month {
+                    background-color: white;
+                    border: 2px solid transparent;
+                    border-radius: 4px;
+                    padding: 4px;
+                    outline: none;
+                    font-size: 14px;
+                }
             }
 
             .money_box {
@@ -294,409 +291,266 @@ header {
                     border-radius: 10px;
                     border: none;
                     color: white;
-                    background-color: #3B82F6;
+                    background-color: #3b82f6;
                     padding: 8px;
-
+                    font-size: 16px;
                 }
             }
 
-            .category-manager {
+            .category_manager {
                 background: white;
                 border-radius: 12px;
-                padding: 16px;
+                padding: 29px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 max-width: 600px;
                 margin: 0 auto;
-                font-family: sans-serif;
-            }
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-            .category-manager h3 {
-                font-size: 16px;
-                margin-bottom: 12px;
-            }
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 12px;
+                }
 
-            .form-row {
-                display: flex;
-                gap: 8px;
-                margin-bottom: 16px;
-            }
+                .form-row {
+                    display: flex;
+                    gap: 8px;
+                    margin-bottom: 16px;
+                }
 
-            .input-text {
-                flex: 1;
-                padding: 8px;
-                border-radius: 6px;
-                border: 1px solid #ccc;
-            }
+                .input-text {
+                    flex: 1;
+                    padding: 8px;
+                    border-radius: 6px;
+                    border: 1px solid #ccc;
+                    font-size: 16px;
+                }
 
-            .add-button {
-                background-color: #22c55e;
-                color: white;
-                padding: 8px 12px;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-                white-space: nowrap;
-            }
+                .add-button {
+                    background-color: #22c55e;
+                    color: white;
+                    padding: 8px 12px;
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    font-size: 16px;
+                }
 
-            .category-list {
-                list-style: none;
-                padding-left: 0;
-            }
+                .category-list {
+                    list-style: none;
+                    padding-left: 0;
+                    
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #eee;
+                        padding: 6px 0;
+                        font-size: 15px;
 
-            .category-list li {
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 1px solid #eee;
-                padding: 6px 0;
-                font-size: 14px;
-            }
-
-            .action {
-                margin-left: 8px;
-                color: red;
-                cursor: pointer;
+                        button {
+                            margin-left: 8px;
+                            color: red;
+                            cursor: pointer;
+                            border: none;
+                            background-color: white;
+                        }
+                        #edit_category{
+                            margin-left: 200px;
+                        }
+                    }
+                }
             }
 
             .money-remaining {
-                .money-remaining {
-                    display: flex;
-                    flex-direction: column;
-
-                    font-family: sans-serif;
-                }
+                display: flex;
+                flex-direction: column;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
                 .label {
-                    font-size: 12px;
+                    font-size: 14px;
                     color: #6b7280;
                     margin-bottom: 2px;
                 }
 
                 .amount {
-                    font-size: 16px;
+                    font-size: 18px;
                     font-weight: 600;
                     color: #22c55e;
                 }
             }
 
-            .spending-form {
-                display: flex;
-                gap: 10px;
-                background: white;
-                padding: 12px 16px;
-                border-radius: 12px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-                max-width: fit-content;
-                align-items: center;
-                font-family: sans-serif;
+            .waring_note {
+                color: #DC2626;
             }
 
-            .input-box {
-                padding: 8px 12px;
-                border-radius: 8px;
-                border: 1px solid #ddd;
-                outline: none;
-                font-size: 14px;
-            }
-
-            .type-button {
-                padding: 8px 12px;
-                border-radius: 8px;
-                border: 1px solid #ddd;
-                background-color: #f0f0f0;
-                cursor: pointer;
-                font-weight: 500;
-            }
-
-            /* Màu khi được chọn */
-            .type-button.selected {
-                background-color: #e5e5e5;
-                color: #111;
-            }
-
-            /* Nút Thêm */
-            .add-button {
-                background-color: #6366f1;
-                /* tím */
-                color: white;
-                padding: 8px 16px;
-                border-radius: 8px;
-                border: none;
-                font-weight: 500;
-                cursor: pointer;
-            }
-
-            
-
-            .card {
+            .wrapper_history_deal {
                 background: white;
                 border-radius: 12px;
-                padding: 16px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                margin-bottom: 20px;
+                padding: 29px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                width: 600px;
+                margin: 0 auto;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+                .history_deal {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .title_history_deal {
+                        color: red;
+                    }
+
+                    .body_history_deal {
+                        display: flex;
+                        gap: 10px;
+
+                        .btn-tim-noi-dung {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            width: 25%;
+                            padding: 10px 3px;
+                            border: 1px solid #dcdcdc;
+                            border-radius: 10px;
+                            background-color: #f9f9f9;
+                            color: #666;
+                            font-size: 14px;
+                            cursor: pointer;
+                            margin-left: 100px;
+
+                            input {
+                                border: none;
+                                background-color: #f9f9f9;
+                                width: 100%;
+                            }
+                        }
+
+                        .find_history_deal {
+                            display: flex;
+
+                            button {
+                                border: none;
+                                background-color: #3b82f6;
+                                color: white;
+                                padding: 10px;
+                                border-radius: 12px;
+                            }
+                        }
+
+                        .sort_history_money {
+                            display: flex;
+
+                            button {
+                                border: none;
+                                border-radius: 12px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #dcdcdc;
+                                color: #000000;
+                                padding: 0px 30px;
+                            }
+                        }
+                    }
+                }
             }
 
-            h3 {
-                font-size: 16px;
-                margin-bottom: 12px;
-            }
 
-            .filter-row {
-                display: flex;
-                gap: 8px;
-                margin-bottom: 12px;
-            }
-
-            .filter-row input {
-                flex: 1;
-                padding: 8px;
-                border-radius: 6px;
-                border: 1px solid #ccc;
-            }
-
-            .sort-button {
-                background-color: #6366f1;
-                color: white;
-                border: none;
-                padding: 8px 12px;
-                border-radius: 6px;
-                cursor: pointer;
-            }
-
-            .transaction-list {
-                list-style: none;
-                padding: 0;
-            }
-
-            .transaction-list li {
-                display: flex;
-                justify-content: space-between;
-                padding: 6px 0;
-                border-bottom: 1px solid #eee;
-            }
-
-            .delete {
-                color: red;
-                cursor: pointer;
-            }
-
-            .pagination {
-                margin-top: 12px;
-                display: flex;
-                gap: 8px;
-            }
-
-            .pagination button {
-                padding: 6px 10px;
-                border-radius: 6px;
-                border: 1px solid #ccc;
-                background: white;
-                cursor: pointer;
-            }
-
-            .pagination .active {
-                background: #6366f1;
-                color: white;
-                font-weight: bold;
-            }
-
-            .warning-box {
-                background-color: #ffe4e6;
-                color: #b91c1c;
-                border: 1px solid #fca5a5;
-                border-radius: 8px;
-                padding: 10px;
-                font-size: 14px;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-
-            .summary-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 12px;
-            }
-
-            .summary-table th,
-            .summary-table td {
-                padding: 8px;
-                border-bottom: 1px solid #ddd;
-                text-align: center;
-            }
-
-            .status-ok {
-                color: green;
-            }
-
-            .status-over {
-                color: red;
-                font-weight: bold;
-            }
-            .add-button{
-                padding: 10px;
-            }
-            .spending-form {
-                display: flex;
-                gap: 10px;
-                background: white;
-                padding: 12px 16px;
-                border-radius: 12px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-                max-width: fit-content;
-                align-items: center;
-                font-family: sans-serif;
-              }
-              
-              .input-box {
-                padding: 8px 12px;
-                border-radius: 8px;
-                border: 1px solid #ddd;
-                outline: none;
-                font-size: 14px;
-              }
-              
-              .type-button {
-                padding: 8px 12px;
-                border-radius: 8px;
-                border: 1px solid #ddd;
-                background-color: #f0f0f0;
-                cursor: pointer;
-                font-weight: 500;
-              }
-              
-              /* Màu khi được chọn */
-              .type-button.selected {
-                background-color: #e5e5e5;
-                color: #111;
-              }
-              
-              /* Nút Thêm */
-              .add-button-spending-form {
-                background-color: #6366f1; /* tím */
-                color: white;
-                padding: 8px 16px;
-                border-radius: 8px;
-                border: none;
-                font-weight: 500;
-                cursor: pointer;
-              }
-              body {
-                font-family: sans-serif;
-                padding: 16px;
-                background: #f7f7f7;
-              }
-              
-              .card {
+            .money_spend_box {
                 background: white;
                 border-radius: 12px;
-                padding: 16px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                margin-bottom: 20px;
-              }
-              
-              h3 {
-                font-size: 16px;
-                margin-bottom: 12px;
-              }
-              
-              .filter-row {
-                display: flex;
-                gap: 8px;
-                margin-bottom: 12px;
-              }
-              
-              .filter-row input {
-                flex: 1;
-                padding: 8px;
-                border-radius: 6px;
-                border: 1px solid #ccc;
-              }
-              
-              .sort-button {
-                background-color: #6366f1;
-                color: white;
-                border: none;
-                padding: 8px 12px;
-                border-radius: 6px;
-                cursor: pointer;
-              }
-              
-              .transaction-list {
-                list-style: none;
-                padding: 0;
-              }
-              
-              .transaction-list li {
-                display: flex;
-                justify-content: space-between;
-                padding: 6px 0;
-                border-bottom: 1px solid #eee;
-              }
-              
-              .delete {
-                color: red;
-                cursor: pointer;
-              }
-              
-              .pagination {
-                margin-top: 12px;
-                display: flex;
-                gap: 8px;
-              }
-              
-              .pagination button {
-                padding: 6px 10px;
-                border-radius: 6px;
-                border: 1px solid #ccc;
+                padding: 29px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: 0 auto;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+                .money_spend {
+                    display: flex;
+                    gap: 10px;
+
+                    input {
+                        width: 150px;
+
+                        border-radius: 10px;
+                        border: 1px solid gray;
+                    }
+
+                    button {
+                        width: 180px;
+                        border: none;
+                        padding: 10px 17px;
+                        border-radius: 10px;
+                        background-color: #6366f1;
+                        color: white;
+                    }
+
+                    #note {
+                        background-color: #EFEFEF;
+                    }
+                }
+            }
+
+            .statistical_table {
                 background: white;
-                cursor: pointer;
-              }
-              
-              .pagination .active {
-                background: #6366f1;
-                color: white;
-                font-weight: bold;
-              }
-              
-              .warning-box {
-                background-color: #ffffff;
-                color: #b91c1c;
-                border: 1px solid #fca5a5;
-                border-radius: 8px;
-                padding: 10px;
-                font-size: 14px;
-                margin-bottom: 20px;
-                text-align: center;
-              }
-              
-              .summary-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 12px;
-              }
-              
-              .summary-table th,
-              .summary-table td {
-                padding: 8px;
-                border-bottom: 1px solid #ddd;
-                text-align: center;
-              }
-              
-              .status-ok {
-                color: green;
-              }
-              
-              .status-over {
-                color: red;
-                font-weight: bold;
-              }
-              
-              
+                border-radius: 12px;
+                padding: 29px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                width: 680px;
+                margin: 0 auto;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-bottom: 30px;
+                .budget-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-family: 'Segoe UI', sans-serif;
+                    font-size: 14px;
+                    color: #333;
+
+                    thead {
+                        border-bottom: 1px solid #e2e8f0;
+
+                        th {
+                            text-align: left;
+                            padding: 12px;
+                            font-weight: 600;
+                            color: #4a5568;
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            border-bottom: 1px solid #edf2f7;
+
+                            td {
+                                padding: 12px;
+                            }
+
+                            .status {
+                                font-weight: 500;
+
+                                &.success {
+                                    color: #38a169; // xanh lá
+
+                                    i {
+                                        margin-right: 4px;
+                                    }
+                                }
+
+                                &.exceed {
+                                    color: #e53e3e; // đỏ
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
-
 }
 
 footer {
+    
     .footer_box {
         display: flex;
         justify-content: center;
@@ -704,6 +558,8 @@ footer {
         height: 5vh;
         background-color: #4338ca;
         color: white;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        
     }
 }

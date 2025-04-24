@@ -2,15 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>STRUCTURE_FINANCE</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/index.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body>
@@ -25,32 +31,40 @@
         <i class="fa-solid fa-chevron-down icon"></i>
       </div>
     </div>
-</header>
+  </header>
 
   <div class="body_content">
     <div class="container_body_box">
+      <!-- Title -->
       <div class="title_box">
         <p><i class="fas fa-bullseye"></i> Kiểm soát chi tiêu thông minh</p>
         <p id="title_box_note">Theo dõi ngân sách và thu chi dễ dàng</p>
       </div>
 
+      <!-- Title Form -->
       <div class="form_content_body">
-        <div class="title_form">       
+        <div class="title_form">
           <p>📊 Quản Lý Tài Chính Cá Nhân</p>
         </div>
+
+        <!-- Date Picker -->
         <div class="wrapper">
           <div class="date-picker">
             <label for="date">📅 Chọn tháng:</label>
             <input type="month" id="monthInput" class="custom-month" value="2025-03" />
           </div>
         </div>
+
+        <!-- Budget Input -->
         <div class="wrapper">
           <div class="money_box">
             <label for="money_month">💰 Ngân sách tháng:</label>
-            <input type="number" placeholder="VD: 5000000">
+            <input type="number" placeholder="VD: 5000000" />
             <button type="submit">Lưu</button>
           </div>
         </div>
+
+        <!-- Money Remaining -->
         <div class="wrapper">
           <div class="money-remaining">
             <span class="label">Số tiền còn lại</span>
@@ -58,7 +72,8 @@
           </div>
         </div>
 
-        <div class="category-manager">
+        <!-- Category Manager -->
+        <div class="category_manager">
           <h3><i class="fa fa-folder-open"></i> Quản lý danh mục (theo tháng)</h3>
           <div class="form-row">
             <input type="text" placeholder="Tên danh mục" class="input-text" />
@@ -66,71 +81,94 @@
             <button class="add-button">Thêm danh mục</button>
           </div>
           <ul class="category-list">
-            <li>Tiền phòng - Giới hạn: 2,000,000 VND <span class="action">Sửa</span> <span class="action">Xoá</span></li>
+            <li>
+              Tiền phòng - Giới hạn: 2,000,000 VND
+              <button id="edit_category">Sửa</button>
+              <button id="delete_category">Xóa</button>
+
+              <!-- <span class="action">Sửa</span>
+              <span class="action">Xoá</span> -->
+            </li>
+            <!-- <li>
+              Tiền phòng - Giới hạn: 2,000,000 VND
+              <button id="edit_category">Sửa</button>
+              <button id="delete_category">Xóa</button>
+
+              <!-- <span class="action">Sửa</span>
+              <span class="action">Xoá</span> -->
+            </li>
           </ul>
         </div>
-
-        <div class="spending-form">
-          <input type="number" placeholder="Số tiền" class="input-box" />
-          <button class="type-button selected">Tiền chi tiêu</button>
-          <input type="text" placeholder="Ghi chú" class="input-box" />
-          <button class="add-button-spending-form">Thêm</button>
-        </div>
-
-        <!-- Lịch sử giao dịch -->
-        <div class="card">
-          <h3><i class="fa fa-history"></i> Lịch sử giao dịch</h3>
-          <div class="filter-row">
-            <input type="text" placeholder="Tìm nội dung" />
-            <button class="sort-button">Sắp xếp theo giá</button>
-          </div>
-          <ul class="transaction-list">
-            <li>Tiền phòng - Đóng tiền phòng tháng 3: 2,000,000 VND <span class="delete">Xoá</span></li>
-            <li>Tiền xăng xe - Đổ xăng 21/3: 100,000 VND <span class="delete">Xoá</span></li>
-          </ul>
-          <div class="pagination">
-            <button>Previous</button>
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>Next</button>
+        <div class="money_spend_box">
+          <div class="money_spend">
+            <input type="text" required placeholder="Số Tiền">
+            <input type="number" required placeholder="Tiền Chi Tiêu" id="note">
+            <input type="text" required placeholder="Ghi chú">
+            <button type="submit">Thêm</button>
           </div>
         </div>
+        <div class="wrapper_history_deal">
+          <div class="history_deal">
+            <div class="title_history_deal">
+              <p>🧾 Lịch sử giao dịch</p>
+            </div>
+            <div class="body_history_deal">
+              <div class="btn-tim-noi-dung">
+                <i class="fas fa-code-branch"></i>
+                <input type="text" id="form_history_deal" placeholder="Tìm Nội Dung">
+              </div>
+              <div class="find_history_deal">
+                <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
+              </div>
+              <div class="sort_history_money">
+                <button type="submit">Sắp xếp Theo Giá </button>
+              </div>
+            </div>
+          </div>
 
-        <!-- Cảnh báo danh mục -->
-        <div class="warning-box">
-          Danh mục "Tiền ăn" đã vượt giới hạn: 1,060,000 / 1,000,000 VND
         </div>
-
-        <!-- Thống kê chi tiêu -->
-        <div class="card">
-          <h3><i class="fa fa-chart-bar"></i> Thống kê chi tiêu các tháng</h3>
-          <table class="summary-table">
-            <thead>
-              <tr>
-                <th>Tháng</th>
-                <th>Chi tiêu</th>
-                <th>Ngân sách</th>
-                <th>Trạng thái</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2025-03</td>
-                <td>2,150,000</td>
-                <td>5,000,000</td>
-                <td class="status-ok">Đạt</td>
-              </tr>
-              <tr>
-                <td>2025-04</td>
-                <td>3,100,000</td>
-                <td>2,000,000</td>
-                <td class="status-over">Vượt</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- thong bao vuot chi tieu -->
+        <div class="wrapper">
+          <div class="waring_note">
+            Danh muc tien an da vuoto qua gioi han: 1,060,000 / 1,000,000 VND
+          </div>
         </div>
-
+        <div class="statistical_table">
+          <div class="head_table">📆 Thống kê chi tiêu các tháng</div>
+          <div class="body_table">
+            <table class="budget-table">
+              <thead>
+                <tr>
+                  <th>Tháng</th>
+                  <th>Chi tiêu</th>
+                  <th>Ngân sách</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025-03</td>
+                  <td>2,150,000 VND</td>
+                  <td>5,000,000</td>
+                  <td class="status success">
+                    <i class="fas fa-check-circle"></i> Đạt
+                  </td>
+                </tr>
+                <tr>
+                  <td>2025-04</td>
+                  <td>3,100,000 VND</td>
+                  <td>3,000,000</td>
+                  <td class="status exceed">
+                    Vượt
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <!-- Font Awesome CDN -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -141,6 +179,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
