@@ -184,7 +184,9 @@ header {
         display: flex;
         justify-content: space-between;
         width: 80%;
-
+        .fa-arrow-right-from-bracket{
+            font-size: 20px;
+        }
         .user_box {
             display: flex;
             gap: 5px;
@@ -197,7 +199,9 @@ header {
         .account_nav_box {
             display: flex;
             gap: 5px;
+            justify-content: space-around;
         }
+
     }
 }
 
