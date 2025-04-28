@@ -1,22 +1,22 @@
-document.querySelector('.login-box').addEventListener('submit', function (e) {
-  e.preventDefault();
+  document.querySelector('.login-box').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  const usernameInput = document.querySelector('input[placeholder="Tên đăng nhập"]').value.trim();
-  const passwordInput = document.querySelector('input[placeholder="Mật khẩu"]').value;
+    const usernameInput = document.querySelector('#username').value.trim();
+    const passwordInput = document.querySelector('#password').value;
 
-  let userList = JSON.parse(localStorage.getItem('userList')) || [];
+    let userList = JSON.parse(localStorage.getItem('userList')) || [];
 
-  const foundUser = userList.find(
-    user => user.username === usernameInput && user.password === passwordInput
-  );
+    const foundUser = userList.find(
+      user => user.username === usernameInput && user.password === passwordInput
+    );
 
-  if (foundUser) {
-    alert('Đăng nhập thành công!');
-    localStorage.setItem('currentUser', JSON.stringify(foundUser));
+    if (foundUser) {
+      alert('Đăng nhập thành công!');
+      localStorage.setItem('currentUser', JSON.stringify(foundUser));
 
-    // Chuyển hướng sang trang chính
-    window.location.href = '../index.html';
-  } else {
-    alert('Sai tên đăng nhập hoặc mật khẩu!');
-  }
-});
+      // Redirect to the main page
+      window.location.href = '../index.html';
+    } else {
+      alert('Sai tên đăng nhập hoặc mật khẩu!');
+    }
+  }); 

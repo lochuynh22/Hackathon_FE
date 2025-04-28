@@ -51,24 +51,25 @@
         <div class="wrapper">
           <div class="date-picker">
             <label for="date">📅 Chọn tháng:</label>
-            <input type="month" id="monthInput" class="custom-month" value="2025-03" />
+            <input type="month" id="monthInput" class="custom-month"  value="2025-03"/>
           </div>
         </div>
 
         <!-- Budget Input -->
         <div class="wrapper">
+          <!-- Phần nhập ngân sách -->
           <div class="money_box">
             <label for="money_month">💰 Ngân sách tháng:</label>
-            <input type="number" placeholder="VD: 5000000" />
-            <button type="submit">Lưu</button>
+            <input type="number" id="money-month" placeholder="VD: 5000000" />
+            <button type="button" id="save-btn">Lưu</button>
           </div>
         </div>
-
-        <!-- Money Remaining -->
+        
+        <!-- Phần hiển thị số tiền còn lại -->
         <div class="wrapper">
           <div class="money-remaining">
             <span class="label">Số tiền còn lại</span>
-            <div class="amount">0 VND</div>
+            <div class="amount" id="remaining-amount">0 VND</div>
           </div>
         </div>
 
@@ -76,29 +77,15 @@
         <div class="category_manager">
           <h3><i class="fa fa-folder-open"></i> Quản lý danh mục (theo tháng)</h3>
           <div class="form-row">
-            <input type="text" placeholder="Tên danh mục" class="input-text" />
-            <input type="number" placeholder="Giới hạn (VND)" class="input-text" />
-            <button class="add-button">Thêm danh mục</button>
+            <input type="text" id="category-name" placeholder="Tên danh mục" class="input-text" />
+            <input type="number" id="category-limit" placeholder="Giới hạn (VND)" class="input-text" />
+            <button class="add-button" id="add-category-btn">Thêm danh mục</button>
           </div>
-          <ul class="category-list">
-            <li>
-              Tiền phòng - Giới hạn: 2,000,000 VND
-              <button id="edit_category">Sửa</button>
-              <button id="delete_category">Xóa</button>
-
-              <!-- <span class="action">Sửa</span>
-              <span class="action">Xoá</span> -->
-            </li>
-            <!-- <li>
-              Tiền phòng - Giới hạn: 2,000,000 VND
-              <button id="edit_category">Sửa</button>
-              <button id="delete_category">Xóa</button>
-
-              <!-- <span class="action">Sửa</span>
-              <span class="action">Xoá</span> -->
-            </li>
+          <ul class="category-list" id="category-list">
+            <!-- Danh sách danh mục sẽ được thêm vào đây -->
           </ul>
         </div>
+
         <div class="money_spend_box">
           <div class="money_spend">
             <input type="text" required placeholder="Số Tiền">
@@ -179,6 +166,20 @@
     </div>
   </footer>
 
+  <div id="notification" style="display: none;">
+    <table id="notification-table" border="1">
+      <thead>
+        <tr>
+          <th>Thông báo</th>
+          <th>Nội dung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Nội dung thông báo sẽ được thêm vào đây thông qua JavaScript -->
+      </tbody>
+    </table>
+    
+  </div>
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

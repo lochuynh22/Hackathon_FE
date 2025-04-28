@@ -552,7 +552,57 @@ header {
         }
     }
 }
-
+#notification {
+    display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  #notification {
+    display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+    /* Căn giữa bảng thông báo theo chiều dọc và chiều ngang */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 80%; /* Điều chỉnh kích thước bảng */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa */
+  }
+  
+  #notification-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+  
+  #notification-table th, #notification-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  #close-notification {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  #close-notification:hover {
+    background-color: #c82333;
+  }
+  
 footer {
     
     .footer_box {
