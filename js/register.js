@@ -6,14 +6,12 @@ if (!localStorage.getItem('userList')) {
       username: "user1",
       password: "password123",
       email: "user1@gmail.com",
-      monthlyCategories: [] // thêm monthlyCategories
     },
     {
       id: 2,
       username: "user2",
       password: "password456",
       email: "user2@gmail.com",
-      monthlyCategories: []
     }
   ];
   localStorage.setItem('userList', JSON.stringify(userList));
@@ -74,7 +72,6 @@ form.addEventListener('submit', function (e) {
     username,
     email,
     password,
-    monthlyCategories: [] // thêm mảng rỗng lúc đăng ký
   };
 
   userList.push(newUser);

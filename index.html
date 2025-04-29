@@ -49,9 +49,9 @@
 
         <!-- Date Picker -->
         <div class="wrapper">
-          <div class="date-picker">
+          <div class="date_picker">
             <label for="date">📅 Chọn tháng:</label>
-            <input type="month" id="monthInput" class="custom-month"  value="2025-03"/>
+            <input type="month" id="monthInput" class="custom_month"  value="2025-03"/>
           </div>
         </div>
 
@@ -60,18 +60,19 @@
           <!-- Phần nhập ngân sách -->
           <div class="money_box">
             <label for="money_month">💰 Ngân sách tháng:</label>
-            <input type="number" id="money-month" placeholder="VD: 5000000" />
-            <button type="button" id="save-btn">Lưu</button>
+            <input type="number" id="money_month" placeholder="VD: 5000000" />
+            <button type="button" id="save_btn">Lưu</button>
           </div>
         </div>
         
         <!-- Phần hiển thị số tiền còn lại -->
         <div class="wrapper">
-          <div class="money-remaining">
+          <div class="money_remaining">
             <span class="label">Số tiền còn lại</span>
-            <div class="amount" id="remaining-amount">0 VND</div>
+            <div class="amount" id="remaining_amount">0 VND</div>
           </div>
         </div>
+        
 
         <!-- Category Manager -->
         <div class="category_manager">
@@ -81,23 +82,41 @@
             <input type="number" id="category-limit" placeholder="Giới hạn (VND)" class="input-text" />
             <button class="add-button" id="add-category-btn">Thêm danh mục</button>
           </div>
-          <ul class="category-list" id="category-list">
-            <!-- Danh sách danh mục sẽ được thêm vào đây -->
-          </ul>
+          <table id="category-table">
+            <thead>
+              <tr>
+                <th>Tên danh mục</th>
+                <th>Giới hạn (VND)</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="category-list">
+              <tr>
+                <td>test</td>
+                <td>1000</td>
+                <td>312312</td>
+              </tr>
+              <tr><td>test</td>
+                <td>1000</td>
+                <td>312312</td></tr>
+            </tbody>
+          </table>
+        
         </div>
+        
 
         <div class="money_spend_box">
           <div class="money_spend">
-            <input type="text" required placeholder="Số Tiền">
-            <input type="number" required placeholder="Tiền Chi Tiêu" id="note">
-            <input type="text" required placeholder="Ghi chú">
+            <input type="text" required placeholder="Số Tiền" id="money_spendBox">
+            <input type="number" required placeholder="Tiền Chi Tiêu" id="note_moneySpend" >
+            <input type="text" required placeholder="Ghi chú" >
             <button type="submit">Thêm</button>
           </div>
         </div>
         <div class="wrapper_history_deal">
           <div class="history_deal">
             <div class="title_history_deal">
-              <p>🧾 Lịch sử giao dịch</p>
+              <p>🧾 <span>Lịch sử giao dịch</span></p>
             </div>
             <div class="body_history_deal">
               <div class="btn-tim-noi-dung">
@@ -111,8 +130,36 @@
                 <button type="submit">Sắp xếp Theo Giá </button>
               </div>
             </div>
+        
+            <!-- Bảng lịch sử giao dịch -->
+            <div class="table_history_deal">
+              <table>
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Nội dung</th>
+                    <th>Giá</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mua gói VIP</td>
+                    <td>100.000₫</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Nạp xu</td>
+                    <td>50.000₫</td>
+                  
+                  </tr>
+                  <!-- Thêm dòng khác nếu cần -->
+                </tbody>
+              </table>
+            </div>
           </div>
-
         </div>
         <!-- thong bao vuot chi tieu -->
         <div class="wrapper">
@@ -123,7 +170,7 @@
         <div class="statistical_table">
           <div class="head_table">📆 Thống kê chi tiêu các tháng</div>
           <div class="body_table">
-            <table class="budget-table">
+            <table class="budget_table">
               <thead>
                 <tr>
                   <th>Tháng</th>
