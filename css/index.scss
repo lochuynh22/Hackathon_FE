@@ -311,7 +311,9 @@ header {
                 max-width: 600px;
                 margin: 0 auto;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            
+            #add-category-btn{
+                background-color: #1f6fc6;
+            }
                 h3 {
                     font-size: 18px;
                     margin-bottom: 12px;
@@ -330,17 +332,42 @@ header {
                     border: 1px solid #ccc;
                     font-size: 16px;
                 }
-            
-                .add-button {
-                    background-color: #22c55e;
-                    color: white;
-                    padding: 8px 12px;
+                #edit-btn{
+                    background-color: #4CAF50; // Sửa
+                  }
+                  
+                #delete-btn {
+                    background-color: #f44336; // Xóa
+                  }
+                button {
+                    
+                    padding: 8px 16px;
+                    font-size: 14px;
                     border: none;
-                    border-radius: 6px;
                     cursor: pointer;
-                    white-space: nowrap;
-                    font-size: 16px;
-                }
+                    border-radius: 4px;
+                    transition: background-color 0.3s ease;
+                    margin-right: 8px;
+                    
+                    &.edit-btn {
+                      background-color: #4CAF50; // Màu xanh cho nút Sửa
+                      color: white;
+                      
+                      &:hover {
+                        background-color: #45a049; // Màu tối hơn khi hover
+                      }
+                    }
+                  
+                    &.delete-btn {
+                      background-color: #f44336; // Màu đỏ cho nút Xóa
+                      color: white;
+                      
+                      &:hover {
+                        background-color: #e53935; // Màu tối hơn khi hover
+                      }
+                    }
+                  }
+                  
             
                 /* Chỉnh sửa bảng */
                 #category-table {
@@ -413,7 +440,14 @@ header {
             .wrapper_history_deal {
                 padding: 20px;
                 font-family: Arial, sans-serif;
-              
+              .delete-btn{
+                background-color: #F44336;
+                border: none;
+                color: rgb(0, 0, 0);
+                border-radius: 10px;
+                
+                padding: 7px 15px;
+              }
                 .history_deal {
                   background: #fff;
                   border-radius: 10px;
@@ -516,15 +550,25 @@ header {
 
 
             .money_spend_box {
+                #chooseCategory{
+                    background: white;
+                    border-radius: 12px;
+                    padding: 10px 0px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    max-width: 600px;
+                    margin: 0 auto;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+                }
                 background: white;
                 border-radius: 12px;
-                padding: 29px;
+                padding: 26px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 max-width: 600px;
                 margin: 0 auto;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+                
                 .money_spend {
+                    margin-top: 30px;
                     display: flex;
                     gap: 10px;
 
@@ -610,14 +654,6 @@ header {
     }
 
 
-#notification {
-    display: none;
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
 
 #notification {
     display: none;
